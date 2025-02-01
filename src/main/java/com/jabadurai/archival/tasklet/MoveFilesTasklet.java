@@ -1,4 +1,4 @@
-package com.jabadurai.archival;
+package com.jabadurai.archival.tasklet;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.StepContribution;
@@ -18,13 +18,13 @@ import java.nio.file.StandardCopyOption;
 public class MoveFilesTasklet implements Tasklet {
 
     @Value("${temp.directory}")
-    private String tempDir;
+    String tempDir;
 
     @Value("${target1.directory}")
-    private String targetDir1;
+    String targetDir1;
 
     @Value("${target2.directory}")
-    private String targetDir2;
+    String targetDir2;
 
     @Override
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {

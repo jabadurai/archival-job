@@ -1,5 +1,7 @@
-package com.jabadurai.archival;
+package com.jabadurai.archival.config;
 
+import com.jabadurai.archival.tasklet.CombineFilesTasklet;
+import com.jabadurai.archival.tasklet.MoveFilesTasklet;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
